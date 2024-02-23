@@ -1,0 +1,144 @@
+/*root; main colors and fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Merienda&family=Pacifico&family=Roboto:wght@500&display=swap");
+:root {
+  --main-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Courgette", cursive;
+  --thirdly-font-family: "Merienda", cursive;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--secondary-font-family);
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  color: white;
+  min-height: 100vh;
+}
+header h1 {
+  text-shadow: 2px 2px 3px black; /*Treba prebaciti na header samo*/
+  font-size: 4rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 1rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  outline: none;
+  box-shadow: 2px 2px 3px grey;
+}
+form button {
+  color: red;
+  cursor: pointer;
+  padding-right: 5px;
+}
+.fa-plus-square {
+  transition: all 0.5s ease;
+}
+.fa-plus-square:hover {
+  transform: scale(1.15);
+}
+/*Glavni DIV KONTEJNER za TO-DO LISTU*/
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Ovo je UL lista NA koju cemo APPENDATI svaki DIV kao list element*/
+.todo-list {
+  list-style-type: none;
+  min-width: 30%;
+}
+/*Div stvoreni u Java Scriptu koji se ponasa kao list element*/
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+/**/
+.todo li {
+  flex: 1; /*Stavili smo flex: 1 na prvi elemente unutar flex kontejnera cime ce on zauzeti
+  NAJVECI DIO PROSTORA, a ostali elementi samo onoliko KOLIKA IM JE BAZA*/
+  padding: 0rem 0.5rem;
+}
+.checked-btn,
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.checked-btn {
+  background-color: green;
+}
+.delete-btn:hover {
+  font-size: 1.75rem;
+}
+.checked-btn:hover {
+  font-size: 1.75rem;
+}
+
+.fa-trash,
+.fa-check {
+  /*Ovo znaci da mozemo kliknuti kroz ove elemente*/
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.todo-effect {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+/*Filter TO-DO LIST*/
+select {
+  /*Opcije poput -webkit-, -moz-, i ostalih koje smo naveli mice default styling za select element poput strelice za dolje bordera itd.*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 3px grey;
+}
+select {
+  color: red;
+  width: 12.5rem;
+  cursor: pointer;
+  padding: 1.5rem;
+  font-size: 16px;
+}
+.select::after {
+  content: "\25BC";
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem;
+  pointer-events: none;
+}

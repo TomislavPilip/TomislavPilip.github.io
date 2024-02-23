@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;500&family=Share+Tech+Mono&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /*font-family: "Bebas Neue", sans-serif;*/
+  font-family: "Orbitron", sans-serif;
+  /*font-family: "Share Tech Mono", monospace;*/
+  /*font-family: "VT323", monospace;*/
+  box-sizing: border-box;
+}
+.container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+}
+.calculator {
+  padding: 20px;
+  background-color: rgb(41, 6, 41);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.calculator button {
+  font-size: 15px;
+  margin: 8px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: transparent;
+  box-shadow: 2px 2px 3px rgb(214, 210, 210), -2px -2px 3px rgb(251, 251, 251);
+  text-shadow: 2px 3px 3px black;
+}
+.calculator input {
+  font-size: 40px;
+  margin: 15px 0;
+  text-align: right;
+  cursor: pointer;
+  max-width: 320px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  box-shadow: 2px 2px 3px rgb(214, 210, 210), -2px -2px 3px rgb(251, 251, 251);
+}
+
+.calculator .horizontal-line {
+  background-color: silver;
+  transition: all 0.3s ease-in-out;
+}
+.calculator .horizontal-line:hover {
+  transform: scale(1.05);
+}
+
+.calculator .vertical-line {
+  background-color: rgb(255, 153, 0);
+  transition: all 0.3s ease-in-out;
+}
+.calculator .vertical-line:hover {
+  transform: scale(1.05);
+}
+.calculator .equal {
+  background-color: orangered;
+  width: 140px;
+  transition: all 0.3s ease-in-out;
+}
+.calculator .equal:hover {
+  transform: scale(1.075);
+}
+
+@media only screen and (max-width: 400px) {
+  .calculator {
+    max-width: 280px;
+  }
+  .calculator input {
+    max-width: 240px;
+  }
+  .calculator button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .calculator {
+    max-width: 225px;
+  }
+  .calculator input {
+    max-width: 195px;
+  }
+  .calculator button {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2193b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #42bcd7,
+    #177a93
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #52c8e3,
+    #1b85a0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.main-container {
+  width: 450px;
+  box-shadow: 3px 3px 8px silver, -3px -3px 8px silver;
+  border-radius: 20px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+.search-bar {
+  display: flex;
+  padding: 1rem;
+}
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.main-container input {
+  padding: 12px;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+
+  font-size: 18px;
+}
+::placeholder {
+  color: rgb(255, 254, 254, 0.75);
+}
+.main-container button {
+  padding: 12px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(9, 153, 210);
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 2px 2px 4px rgb(9, 153, 210);
+}
+.main-container button:hover {
+  color: white;
+  background-color: rgb(9, 153, 210);
+}
+
+#weather-image {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+}
+.col-max {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.col-min {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.temperature-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 1px 1px 1px rgb(201, 201, 201, 0.7),
+    -1px -1px 1px rgb(201, 201, 201, 0.7);
+  margin-bottom: 10px;
+}
+.city-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 1px 1px 1px rgb(201, 201, 201, 0.3),
+    -1px -1px 1px rgb(201, 201, 201, 0.3);
+}
+.city-box #city {
+  padding-bottom: 0;
+  margin-left: 5px;
+  padding-top: 15px;
+}
+#weather {
+  margin-top: 0;
+}
