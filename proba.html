@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>See More Button</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hidden Files</h1>
+      <div id="hiddenFiles">
+        <div class="file">File 1</div>
+        <div class="file">File 2</div>
+        <div class="file">File 3</div>
+        <div class="file">File 4</div>
+        <div class="file">File 5</div>
+        <div class="file">File 6</div>
+        <div class="file">File 7</div>
+        <div class="file">File 8</div>
+        <div class="file">File 9</div>
+        <div class="file">File 10</div>
+        <div class="file">File 11</div>
+        <div class="file">File 12</div>
+        <div class="file">File 13</div>
+        <div class="file">File 14</div>
+        <div class="file">File 15</div>
+        <div class="file">File 16</div>
+        <div class="file">File 17</div>
+        <div class="file">File 18</div>
+        <div class="file">File 19</div>
+        <div class="file">File 20</div>
+      </div>
+      <button id="seeMoreBtn" class="btn btn-primary">See More</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".file").slice(10).hide(); // Initially hide all files beyond the first 10
+
+        $("#seeMoreBtn").on("click", function () {
+          $(".file:hidden").slice(0, 5).slideDown(); // Show 5 more hidden files
+          if ($(".file:hidden").length === 0) {
+            $("#seeMoreBtn").fadeOut(); // Hide the button when all files are visible
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+In this example, the first 10 files are visible initially, and when the "See
+More" button is clicked, it reveals the next 5 hidden files. The button fades
+out when there are no more hidden files left to show. Adjust the numbers as
+needed to fit your specific requirements.
