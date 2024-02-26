@@ -48,8 +48,18 @@ body {
   display: block;
   position: absolute;
   top: 0;
-  right: 8%;
+  right: 0%;
   display: none;
+}
+.hamburger-button {
+  background-color: grey;
+  font-size: 12px;
+  font-weight: bolder;
+  color: white;
+  border: none;
+}
+.hamburger-button span {
+  padding: 2px;
 }
 
 /*.menu-list li a::after {
@@ -139,7 +149,7 @@ body {
     display: block;
   }
   .side-bar-menu {
-    display: flex;
+    display: none;
   }
   .header-display-hidden {
     display: none;
