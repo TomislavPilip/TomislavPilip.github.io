@@ -50,6 +50,7 @@ body {
   top: 0;
   right: 0%;
   display: none;
+  position: fixed;
 }
 .hamburger-button {
   background-color: grey;
