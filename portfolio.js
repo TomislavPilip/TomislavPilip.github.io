@@ -4,6 +4,6 @@ const hamburgerMenu = document.querySelector(".side-bar-menu");
 
 $(document).ready(function () {
   $(".hamburger-icon").click(function () {
-    $(".side-bar-menu").toggle(1000);
+    $(".side-bar-menu").toggle(500);
   });
 });
